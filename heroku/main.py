@@ -524,7 +524,8 @@ class Heroku:
             if self.arguments.no_auth:
                 return
             if self.web:
-                await self.web.start(self.arguments.port, proxy_pass=True)
+                port = int(os.environ.get("PORT", 5000))
+                await self.web.start(port, proxy_pass=True)
                 await self._web_banner()
                 await self.web.wait_for_api_token_setup()
                 self.api_token = self.web.api_token
