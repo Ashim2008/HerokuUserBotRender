@@ -50,9 +50,9 @@ def status():
 
 def run():
     # Для Render.com используем переменную PORT
-    port = int(os.environ.get('PORT', 8080))
-    if port == 5000:  # Если основной порт занят
-        port = 8080
+    port = int(os.environ.get('PORT', 10001))
+    if port == 10001:  # Если основной порт занят
+        port = 10001
     app.run(host="0.0.0.0", port=port, debug=False)
 
 def self_ping():
