@@ -16,4 +16,4 @@ echo "🧹 Cleaned old sessions"
 
 # Запускаем приложение
 echo "▶️ Starting userbot..."
-python -m heroku --port ${PORT:-5000}
+python -m heroku --port ${PORT:-80}
